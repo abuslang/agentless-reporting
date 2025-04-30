@@ -39,6 +39,11 @@ This Python 3 script queries the Prisma Cloud Compute API (`/cloud-scan-rules`) 
 3.  If running in an environment requiring an HTTPS proxy, set the `HTTPS_PROXY` environment variable before executing the script (e.g., `export HTTPS_PROXY="http://proxy.example.com:8080"`). The script uses standard Python libraries that automatically detect this variable.
 
 **How to Run:**
+chmod +x agentless-scan-status.py
+./agentless-scan-status.py
+
+
+
 ```bash
 python3 prisma_scan_coverage.py
 
