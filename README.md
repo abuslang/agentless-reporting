@@ -7,7 +7,7 @@ This Python 3 script queries the Prisma Cloud Compute API (`/cloud-scan-rules`) 
 
 **Prerequisites:**
 *   Python 3 (Uses only standard libraries like `urllib`, `json`, `logging`, `sys`, `collections`. No external libraries like `requests` or `pandas` are needed, so no `pip install` is required).
-*   A `config.py` file in the same directory with your Prisma Cloud API URL (`url`), Compute Console URL (`compute_url`), credentials (`api_key`, `api_secret`), and optionally `customer_name`.
+*   A `config.py` file in the same directory with your Prisma Cloud API URL (`url`), Compute Console URL (`compute_url`), credentials (`api_key`, `api_secret`).
 
 **Configuration:**
 1.  Create a file named `config.py` in the same directory as the script.
@@ -28,13 +28,6 @@ This Python 3 script queries the Prisma Cloud Compute API (`/cloud-scan-rules`) 
     api_key = "YOUR_ACCESS_KEY_ID_OR_USERNAME"
     api_secret = "YOUR_SECRET_KEY_OR_PASSWORD"
 
-    # Add customerName if required by your main portal login (often needed for SSO users)
-    # Set to None or "" if not needed
-    customer_name = "YOUR_CUSTOMER_NAME"
-
-    # Optional: Filter results by project name (URL encoded if needed, e.g., "My+Project")
-    # Set to None or "" to disable
-    project_name = ""
     ```
 3.  If running in an environment requiring an HTTPS proxy, set the `HTTPS_PROXY` environment variable before executing the script (e.g., `export HTTPS_PROXY="http://proxy.example.com:8080"`). The script uses standard Python libraries that automatically detect this variable.
 
